@@ -1,6 +1,6 @@
 # Mistral Code
 
-![Qwen Code Screenshot](./docs/assets/qwen-screenshot.png)
+![Qwen Code Screenshot](./docs/assets/MistralScreenshot.png)
 
 Mistral Code is a command-line AI workflow tool adapted from [**Gemini CLI**](https://github.com/google-gemini/gemini-cli) and [**Qwen Code**](https://github.com/QwenLM/qwen-code) (Please refer to [this document](./README.gemini.md) for more details), optimized for [Devstral](https://mistral.ai/news/devstral-2507) models.
 
