@@ -1,4 +1,4 @@
-# Qwen Code
+# Mistral Code
 
 ![Qwen Code Screenshot](./docs/assets/qwen-screenshot.png)
 
