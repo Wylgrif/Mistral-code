@@ -25,7 +25,7 @@ curl -qL https://www.npmjs.com/install.sh | sh
 Or you can install it from source:
 
 ```bash
-git clone https://github.com/QwenLM/qwen-code.git
+git clone https://github.com/Wylgrif/Mistral-code.git
 cd mistral-code
 npm install
 npm install -g .
