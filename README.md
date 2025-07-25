@@ -1,17 +1,14 @@
 # Mistral Code
 
-![Mistral Code Screenshot](./docs/assets/gemini-screenshot.png)
+![Qwen Code Screenshot](./docs/assets/MistralScreenshot.png)
 
-Mistral Code is a command-line AI workflow tool adapted from [**Gemini CLI**](https://github.com/google-gemini/gemini-cli) (Please refer to [this document](./README.gemini.md) for more details), optimized for [Mistral-Coder](https://github.com/mistralai/mistral-coder) models with enhanced parser support & tool support.
-
-> [!WARNING]
-> Mistral Code may issue multiple API calls per cycle, resulting in higher token usage, similar to Claude Code. We’re actively working to enhance API efficiency and improve the overall developer experience.
+Mistral Code is a command-line AI workflow tool adapted from [**Gemini CLI**](https://github.com/google-gemini/gemini-cli) and [**Qwen Code**](https://github.com/QwenLM/qwen-code) (Please refer to [this document](./README.gemini.md) for more details), optimized for [Devstral](https://mistral.ai/news/devstral-2507) models.
 
 ## Key Features
 
 - **Code Understanding & Editing** - Query and edit large codebases beyond traditional context window limits
 - **Workflow Automation** - Automate operational tasks like handling pull requests and complex rebases
-- **Enhanced Parser** - Adapted parser specifically optimized for Mistral-Coder models
+- **Enhanced Parser** - Adapted parser specifically optimized for Qwen-Coder models
 
 ## Quick Start
 
@@ -25,57 +22,36 @@ curl -qL https://www.npmjs.com/install.sh | sh
 
 ### Installation
 
-```bash
-npm install -g @mistral-code/mistral-code
-mistral --version
-```
+You can install it from source:
 
+```bash
+git clone https://github.com/Wylgrif/Mistral-code.git
+cd mistral-code
+npm install
+npm install -g .
+```
 Then run from anywhere:
 
 ```bash
 mistral
 ```
 
-Or you can install it from source:
-
-```bash
-git clone https://github.com/mistralai/mistral-code.git
-cd mistral-code
-npm install
-npm install -g .
-```
-
 ### API Configuration
 
 Set your Mistral API key (In Mistral Code project, you can also set your API key in `.env` file). the `.env` file should be placed in the root directory of your current project.
 
-> ⚠️ **Notice:** <br>
-> **If you are in mainland China, please go to https://bailian.console.aliyun.com/ or https://modelscope.cn/docs/model-service/API-Inference/intro to apply for your API key** <br>
-> **If you are not in mainland China, please go to https://modelstudio.console.alibabacloud.com/ to apply for your API key**
-
-If you are in mainland China, you can use Mistral-Coder through the Alibaba Cloud bailian platform.
-
 ```bash
 export OPENAI_API_KEY="your_api_key_here"
-export OPENAI_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"
-export OPENAI_MODEL="mistral-coder-plus"
+export OPENAI_BASE_URL="your_inference_provider"
+export OPENAI_MODEL="your_ai_model"
 ```
-
-If you are in mainland China, ModelScope offers 2,000 free model inference API calls per day:
-
+example with ollama:
 ```bash
-export OPENAI_API_KEY="your_api_key_here"
-export OPENAI_BASE_URL="https://api-inference.modelscope.cn/v1"
-export OPENAI_MODEL="mistral/mistral-coder-480B-A35B-Instruct"
+export OPENAI_API_KEY="ollama"
+export OPENAI_BASE_URL="http://localhost:11434/v1/"
+export OPENAI_MODEL="devstral"
 ```
-
-If you are not in mainland China, you can use Mistral-Coder through the Alibaba Cloud modelstuido platform.
-
-```bash
-export OPENAI_API_KEY="your_api_key_here"
-export OPENAI_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
-export OPENAI_MODEL="mistral-coder-plus"
-```
+*Note*: You must have [Ollama](https://ollama.com/download) and [Devstral](https://ollama.com/library/devstral) installed on your computer to use this configuration.
 
 ## Usage Examples
 
@@ -129,18 +105,11 @@ mistral
 > Create API documentation
 ```
 
-## Benchmark Results
-
-### Terminal-Bench
-
-| Agent     | Model              | Accuracy |
-| --------- | ------------------ | -------- |
-| Mistral Code | mistral-coder-480A35 | 37.5     |
 
 ## Project Structure
 
 ```
-mistral-code/
+Mistral-code/
 ├── packages/           # Core packages
 ├── docs/              # Documentation
 ├── examples/          # Example code
@@ -157,12 +126,8 @@ If you encounter issues, check the [troubleshooting guide](docs/troubleshooting.
 
 ## Acknowledgments
 
-This project is based on [Google Gemini CLI](https://github.com/google-gemini/gemini-cli). We acknowledge and appreciate the excellent work of the Gemini CLI team. Our main contribution focuses on parser-level adaptations to better support Mistral-Coder models.
+This project is based on [Google Gemini CLI](https://github.com/google-gemini/gemini-cli). We acknowledge and appreciate the excellent work of the Gemini CLI team. Our main contribution focuses on parser-level adaptations to better support Qwen-Coder models.
 
 ## License
 
 [LICENSE](./LICENSE)
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=mistralai/mistral-code&type=Date)](https://www.star-history.com/#mistralai/mistral-code&Date)
