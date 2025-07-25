@@ -4,9 +4,6 @@
 
 Mistral Code is a command-line AI workflow tool adapted from [**Gemini CLI**](https://github.com/google-gemini/gemini-cli) and [**Qwen Code**](https://github.com/QwenLM/qwen-code) (Please refer to [this document](./README.gemini.md) for more details), optimized for [Devstral](https://mistral.ai/news/devstral-2507) models.
 
-> [!WARNING]
-> Qwen Code may issue multiple API calls per cycle, resulting in higher token usage, similar to Claude Code. We’re actively working to enhance API efficiency and improve the overall developer experience.
-
 ## Key Features
 
 - **Code Understanding & Editing** - Query and edit large codebases beyond traditional context window limits
@@ -25,24 +22,18 @@ curl -qL https://www.npmjs.com/install.sh | sh
 
 ### Installation
 
-```bash
-npm install -g @qwen-code/qwen-code
-qwen --version
-```
-
-Then run from anywhere:
-
-```bash
-qwen
-```
-
 Or you can install it from source:
 
 ```bash
 git clone https://github.com/QwenLM/qwen-code.git
-cd qwen-code
+cd mistral-code
 npm install
 npm install -g .
+```
+Then run from anywhere:
+
+```bash
+mistral
 ```
 
 ### API Configuration
