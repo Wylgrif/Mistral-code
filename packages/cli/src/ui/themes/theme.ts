@@ -22,6 +22,7 @@ export interface ColorsTheme {
   Comment: string;
   Gray: string;
   GradientColors?: string[];
+  LineByLineGradientColors?: string[];
 }
 
 export const lightTheme: ColorsTheme = {

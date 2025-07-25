@@ -16,6 +16,7 @@ interface TipsProps {
 export const Tips: React.FC<TipsProps> = ({ config }) => {
   const geminiMdFileCount = config.getGeminiMdFileCount();
   return (
+    /*
     <Box flexDirection="column" marginBottom={1}>
       <Text color={Colors.Foreground}>Tips for getting started:</Text>
       <Text color={Colors.Foreground}>
@@ -41,5 +42,7 @@ export const Tips: React.FC<TipsProps> = ({ config }) => {
         for more information.
       </Text>
     </Box>
+    */
+    <></>
   );
 };

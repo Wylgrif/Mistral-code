@@ -21,6 +21,7 @@ import { Theme, ThemeType } from './theme.js';
 import { ANSI } from './ansi.js';
 import { ANSILight } from './ansi-light.js';
 import { NoColorTheme } from './no-color.js';
+import { Mistral } from './mistral.js';
 import process from 'node:process';
 
 export interface ThemeDisplay {
@@ -28,7 +29,7 @@ export interface ThemeDisplay {
   type: ThemeType;
 }
 
-export const DEFAULT_THEME: Theme = QwenDark;
+export const DEFAULT_THEME: Theme = Mistral;
 
 class ThemeManager {
   private readonly availableThemes: Theme[];
@@ -51,6 +52,7 @@ class ThemeManager {
       XCode,
       ANSI,
       ANSILight,
+      Mistral,
     ];
     this.activeTheme = DEFAULT_THEME;
   }

@@ -9,6 +9,8 @@ import { Box, Text } from 'ink';
 import Gradient from 'ink-gradient';
 import { Colors } from '../colors.js';
 import { shortAsciiLogo, longAsciiLogo } from './AsciiArt.js';
+import { LineByLineGradient } from './LineByLineGradient.js';
+import { LineByLineGradient } from './LineByLineGradient.js';
 import { getAsciiArtWidth } from '../utils/textUtils.js';
 
 interface HeaderProps {
@@ -36,6 +38,17 @@ export const Header: React.FC<HeaderProps> = ({
 
   const artWidth = getAsciiArtWidth(displayTitle);
 
+  const lineByLineGradientColors = [
+    '#ffd800',
+    '#ffd800',
+    '#ffd800',
+    '#ffaf00',
+    '#ff8205',
+    '#fa500f',
+    '#e10500',
+    '#e10500',
+  ];
+
   return (
     <Box
       marginBottom={1}
@@ -44,13 +57,7 @@ export const Header: React.FC<HeaderProps> = ({
       flexShrink={0}
       flexDirection="column"
     >
-      {Colors.GradientColors ? (
-        <Gradient colors={Colors.GradientColors}>
-          <Text>{displayTitle}</Text>
-        </Gradient>
-      ) : (
-        <Text>{displayTitle}</Text>
-      )}
+      <LineByLineGradient text={displayTitle} colors={lineByLineGradientColors} />
       {nightly && (
         <Box width="100%" flexDirection="row" justifyContent="flex-end">
           <Gradient colors={Colors.GradientColors}>
