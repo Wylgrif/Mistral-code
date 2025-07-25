@@ -47,35 +47,20 @@ npm install -g .
 
 ### API Configuration
 
-Set your Qwen API key (In Qwen Code project, you can also set your API key in `.env` file). the `.env` file should be placed in the root directory of your current project.
-
-> ⚠️ **Notice:** <br>
-> **If you are in mainland China, please go to https://bailian.console.aliyun.com/ or https://modelscope.cn/docs/model-service/API-Inference/intro to apply for your API key** <br>
-> **If you are not in mainland China, please go to https://modelstudio.console.alibabacloud.com/ to apply for your API key**
-
-If you are in mainland China, you can use Qwen3-Coder through the Alibaba Cloud bailian platform.
+Set your Mistral API key (In Mistral Code project, you can also set your API key in `.env` file). the `.env` file should be placed in the root directory of your current project.
 
 ```bash
 export OPENAI_API_KEY="your_api_key_here"
-export OPENAI_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"
-export OPENAI_MODEL="qwen3-coder-plus"
+export OPENAI_BASE_URL="your_inference_provider"
+export OPENAI_MODEL="your_ai_model"
 ```
-
-If you are in mainland China, ModelScope offers 2,000 free model inference API calls per day:
-
+example with ollama:
 ```bash
-export OPENAI_API_KEY="your_api_key_here"
-export OPENAI_BASE_URL="https://api-inference.modelscope.cn/v1"
-export OPENAI_MODEL="Qwen/Qwen3-Coder-480B-A35B-Instruct"
+export OPENAI_API_KEY="ollama"
+export OPENAI_BASE_URL="http://localhost:11434/v1/"
+export OPENAI_MODEL="devstral"
 ```
-
-If you are not in mainland China, you can use Qwen3-Coder through the Alibaba Cloud modelstuido platform.
-
-```bash
-export OPENAI_API_KEY="your_api_key_here"
-export OPENAI_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
-export OPENAI_MODEL="qwen3-coder-plus"
-```
+*Note*: You must have [Ollama](https://ollama.com/download) and [Devstral](https://ollama.com/library/devstral) installed on your computer to use this configuration.
 
 ## Usage Examples
 
@@ -83,7 +68,7 @@ export OPENAI_MODEL="qwen3-coder-plus"
 
 ```sh
 cd your-project/
-qwen
+mistral
 > Describe the main pieces of this system's architecture
 ```
 
@@ -129,13 +114,6 @@ qwen
 > Create API documentation
 ```
 
-## Benchmark Results
-
-### Terminal-Bench
-
-| Agent     | Model              | Accuracy |
-| --------- | ------------------ | -------- |
-| Qwen Code | Qwen3-Coder-480A35 | 37.5     |
 
 ## Project Structure
 
