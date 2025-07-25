@@ -140,7 +140,7 @@ qwen
 ## Project Structure
 
 ```
-qwen-code/
+Mistral-code/
 ├── packages/           # Core packages
 ├── docs/              # Documentation
 ├── examples/          # Example code
@@ -162,7 +162,3 @@ This project is based on [Google Gemini CLI](https://github.com/google-gemini/ge
 ## License
 
 [LICENSE](./LICENSE)
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=QwenLM/qwen-code&type=Date)](https://www.star-history.com/#QwenLM/qwen-code&Date)
