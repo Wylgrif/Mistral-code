@@ -22,7 +22,7 @@ curl -qL https://www.npmjs.com/install.sh | sh
 
 ### Installation
 
-Or you can install it from source:
+You can install it from source:
 
 ```bash
 git clone https://github.com/Wylgrif/Mistral-code.git
