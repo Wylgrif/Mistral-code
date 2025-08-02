@@ -51,7 +51,7 @@ export OPENAI_API_KEY="ollama"
 export OPENAI_BASE_URL="http://localhost:11434/v1/"
 export OPENAI_MODEL="devstral"
 ```
-*Note*: Use the `setx` command in Windows cmd.
+*Note*: Use the `set` command in Windows cmd.
 
 *Note*: You must have [Ollama](https://ollama.com/download) and [Devstral](https://ollama.com/library/devstral) installed on your computer to use this configuration.
 
